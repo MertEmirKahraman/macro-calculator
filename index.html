@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Makro & Kalori Hesaplayıcı</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>Makro Hesaplayıcı</h1>
+    <p class="subtitle">Günlük besin değerlerini gir, toplam kalorini anında gör.</p>
+
+    <form id="macro-form" class="grid-form">
+      <div class="input-group">
+        <label for="protein">Protein (g)</label>
+        <input type="number" id="protein" min="0" placeholder="Örn: 160" required />
+      </div>
+      <div class="input-group">
+        <label for="carbs">Karbonhidrat (g)</label>
+        <input type="number" id="carbs" min="0" placeholder="Örn: 220" required />
+      </div>
+      <div class="input-group">
+        <label for="fat">Yağ (g)</label>
+        <input type="number" id="fat" min="0" placeholder="Örn: 60" required />
+      </div>
+      <button type="submit" class="btn">Hesapla</button>
+    </form>
+
+    <section id="result" class="result hidden">
+      <div class="total-box">
+        <span>Toplam Enerji</span>
+        <strong id="total-kcal">0 kcal</strong>
+      </div>
+      <div class="distribution" id="macro-dist"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
